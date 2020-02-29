@@ -40,6 +40,10 @@
 
 ## Attaching to Kubernetes
 
+- Get the cli
+- az aks install-cli
+- Enable source code completion in bash
+- echo 'source <(kubectl completion bash)' >>~/.bashrc
 - Get Kubeconfig from az cli
 - az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 - Whats in a Kubeconfig
@@ -51,7 +55,9 @@
 ## A Simple Example
 
 - Deploy nginx
+kubectl run nginx-web --image nginx
 - Exec into the container
+kubectl exec nginx-web-84dc48d749-md2gl -it /bin/sh
 - curl the output
 - Review the Namespace
 - Review the ReplicaSet
